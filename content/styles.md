@@ -1,8 +1,8 @@
 ---
-title: Link styles
+title: My Socials
 ---
 
-These are all the services I use. You can contact me in any of these sites. Please send a message and I am always available at your service.
+These are all the social medias I use. You can contact me in any of these sites. Please send a message and I am always available at your service.
 <br><br>
 
 </section>
