@@ -1,16 +1,16 @@
-title = "Arjun Dhungel"
+title = "Shriya Bayalkoti"
 
 enableEmoji = true
 disableKinds = ["taxonomy", "term"]
 
 [params.author]
-  name = "Arjun Dhungel"
-  headline = "Hello! I'm an IT student deeply immersed in the world of social networks, particularly YouTube, and networking. Beyond my technical expertise, I'm fueled by a passion for singing and vlogging."
-  image = "arjun.jpeg"
+  name = "Shriya Bayalkoti"
+  headline = "Hi stranger! I am an IT student persuing a Bachelors degree from [Janamaitri Multiple Campus](https://www.janamaitri.edu.np/). I am a to-be PHP developer. Nice to meet you."
+  image = "shriya.jpg"
   links = [
-    { link = { href = "/arjunCv.pdf", text = "Download my CV >>", icon = "" } },
-    { email = "mailto:aaarjun6654@gmail.com"},
-    { youtube = "https://youtube.com/" },
+    { link = { href = "/shriyaCV.pdf", text = "Download my CV >>", icon = "" } },
+    { github = "https://github.com/shriyana" },
+    { email = "mailto:shreeyana05@gmail.com"},
     { link = { href = "styles/", text = "Reach me", target = "_self" } },
   ]
 
