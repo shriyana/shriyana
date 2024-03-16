@@ -8,8 +8,8 @@ These are all the social medias I use. You can contact me in any of these sites.
 </section>
 <section class="flex flex-col flex-wrap min-w-full mt-4 sm:min-w-0">
 {{< link youtube >}}
-{{< link facebook >}}
-{{< link instagram >}}
+{{< link facebook "https://facebook.com/">}}
+{{< link instagram "https://instragram.com/">}}
 {{< link linkedin >}}
 {{< link snapchat >}}
 {{< link whatsapp >}}
