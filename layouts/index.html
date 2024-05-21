@@ -1,71 +1,43 @@
+{{ define "body_classes" }}page-home{{ end }}
+
 {{ define "main" }}
-  <article class="flex flex-col items-center justify-center h-full mt-10 text-center">
-    <header class="flex flex-col items-center mb-3">
-      {{ with .Site.Params.Author.image }}
-        {{ $src := . }}
-        {{ $resource := "" }}
-        {{ if $.Page.Resources.GetMatch $src }}
-          {{ $resource = $.Page.Resources.GetMatch $src }}
-        {{ else if resources.GetMatch $src }}
-          {{ $resource = resources.Get $src }}
-        {{ end }}
-        {{ with $resource }}
-          {{ $src = (.Fill "288x288").RelPermalink }}
-        {{ end }}
-        <img
-          class="mb-2 rounded"
-          width="250"
-          height="200"
-          alt="{{ $.Site.Params.Author.name | default "Author" }}"
-          src="{{ $src }}"
-        />
-      {{ end }}
-    <br>
-      <h1 class="text-4xl font-extrabold dark:text-white">
-        {{ .Params.title | default .Site.Params.Author.name | default .Site.Title | emojify }}
-      </h1>
-    <br>
-      {{ with .Site.Params.Author.headline }}
-        <h2 class="text-xl text-neutral-500 dark:text-neutral-400">
-          {{ . | markdownify | emojify }}
-        </h2>
-      {{ end }}
-      {{ with .Content }}
-        <section class="pt-5 prose dark:prose-invert">{{ . | emojify }}</section>
-      {{ end }}
-    </header>
-    {{ with .Site.Params.Author.links }}
-      <div class="flex flex-col flex-wrap min-w-full mt-4 sm:min-w-0">
-        {{ range $links := . }}
-          {{ range $type, $data := $links }}
-            {{ $href := $data }}
-            {{ $icon := $type }}
-            {{ $text := i18n (printf "link.%s" $type) }}
-            {{ $target := "_blank" }}
-            {{ $title := "" }}
-            {{ if reflect.IsMap $data }}
-              {{ with $data.href }}{{ $href = . }}{{ end }}
-              {{ with $data.icon }}{{ $icon = . }}{{ end }}
-              {{ with $data.text }}{{ $text = . }}{{ end }}
-              {{ with $data.target }}{{ $target = . }}{{ end }}
-              {{ with $data.title }}{{ $title = . }}{{ end }}
-            {{ end }}
-            <a
-              class="link link-{{ $type }} mb-3 min-w-full rounded py-2 text-lg sm:px-24"
-              href="{{ $href }}"
-              target="{{ $target }}"
-              {{ with $title }}title="{{ . }}"{{ end }}
-              rel="me noopener noreferrer"
-              {{ if eq $type "download" }}download{{ end }}
-            >
-              {{- with $icon -}}
-                <span class="mr-1">{{ partial "icon.html" . }}</span>
-              {{- end -}}
-              {{ $text | emojify }}
-            </a>
-          {{ end }}
-        {{ end }}
-      </div>
+
+  {{ if .Site.Params.showAuthorOnHomepage }}
+    {{ partial "author-large.html" . }}
+  {{ end }}
+
+  <div class="intro">
+    <h1>{{ .Title }}{{ if .Site.Params.addDot }}<span class="dot">.</span>{{ end }}</h1>
+    {{ if .Site.Params.showIntroContentOnHomepage}}
+      <div class="intro-content">{{ .Content }}</div>
     {{ end }}
-  </article>
+  </div>
+
+  {{ if .Site.Params.showPostsOnHomepage }}
+
+    {{ $pages := where .Site.RegularPages "Type" "posts" }}
+    {{ $sorted := ($pages.ByParam "date").Reverse }}
+    {{ if .Site.Params.sortPostsByDateOldestFirst }}
+      {{ $sorted = $pages.ByParam "date" }}
+    {{ end }}
+
+    {{ $paginator := .Paginate $sorted }}
+
+    {{ if .Site.Params.usePaginationOnHomepage }}
+      {{ range $paginator.Pages }}
+        {{ .Render "summary" }}
+      {{ end }}
+      {{ partial "paginator" . }}
+    {{ else }}
+      {{ $limit := .Site.Params.limitPostsOnHomepage | default 3 }}
+      {{ range first $limit $sorted}}
+        {{ .Render "summary" }}
+      {{ end }}
+      <a class="view-more" href="/posts">More Posts</a>
+    {{ end }}
+  {{ end }}
+
+{{ end }}
+
+{{ define "footer_js" }}
 {{ end }}
