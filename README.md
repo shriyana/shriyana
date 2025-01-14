@@ -1,6 +1,6 @@
 # 👋 Hi there! I'm Shriya Bayalkoti
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=React+Developer;BCA+Student;Tech+Enthusiast)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=React+Developer;BICT+Student;Tech+Enthusiast)](https://git.io/typing-svg)
 
 Welcome to my GitHub profile! I'm a Bachelors student in Computer Applications and a passionate React developer. I love building web applications and exploring new technologies.
 
