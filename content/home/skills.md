@@ -18,13 +18,13 @@ subtitle = "I AM REALLY GOOD AT THE FOLLOWING TECHNICAL SKILLS"
   icon = "html5"
   icon_pack = "fab"
   name = "HTML"
-  parcent = "90%"
+  parcent = "80%"
   
 [[feature]]
   icon = "css3-alt"
   icon_pack = "fab"
   name = "CSS"
-  parcent = "80%" 
+  parcent = "75%" 
 
 [[feature]]
   icon = "js"
@@ -36,19 +36,19 @@ subtitle = "I AM REALLY GOOD AT THE FOLLOWING TECHNICAL SKILLS"
   icon = "python"
   icon_pack = "fab"
   name = "Python"
-  parcent = "70%"
+  parcent = "60%"
   
 [[feature]]
   icon = "php"
   icon_pack = "fab"
   name = "PHP"
-  parcent = "95%"
+  parcent = "70%"
 
 [[feature]]
   icon = "git"
   icon_pack = "fab"
   name = "Git / Github"
-  parcent = "90%"
+  parcent = "80%"
   
 [[feature]]
   icon = "windows"
@@ -61,6 +61,21 @@ subtitle = "I AM REALLY GOOD AT THE FOLLOWING TECHNICAL SKILLS"
   icon = "linux"
   icon_pack = "fab"
   name = "Linux"
-  parcent = "95%"
+  parcent = "25%"
+
+
+[[feature]]
+  icon = "pen-ruler"
+  icon_pack = "fab"
+  name = "Photoshop"
+  parcent = "50%"
+
+
+[[feature]]
+  icon = "canvas"
+  icon_pack = "fab"
+  name = "Canvas"
+  parcent = "50%"
+
 
 +++
