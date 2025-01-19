@@ -38,26 +38,26 @@ education:
     institution: Janamaitri Multiple Campus
     year: 8th Sem ongoing...
   - course: +2 Science
-    institution: Radhika Secondary School
+    institution:  Janamaitri Multiple Campus
     year: 2019
   - course: School Leaving Certification
-    institution: Araniko Secondary School
+    institution: Janapath Secondary School
     year: 2017
 
 # Social/academia Networking
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:shriya.bayalkoti@example.com'
+  link: 'mailto:shreeyana05@gmail.com'
 - icon: instagram
   icon_pack: fab
-  link: https://www.instagram.com/shriya_bayalkoti/
+  link: https://www.instagram.com/shree.yana/
 - icon: github
   icon_pack: fab
-  link: https://github.com/shriyabayalkoti
+  link: https://github.com/shriyana
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/in/shriyabayalkoti
+  link: https://www.linkedin.com/in/shreeyana/
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.  
 # - icon: cv
@@ -65,7 +65,7 @@ social:
 #   link: files/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: ""
+email: "shreeyana05@gmail.com"
   
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.  
